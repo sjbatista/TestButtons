@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TestBottons</string>
+    <string name="initial_textStr">Initial text</string>
+    <string name="btn_info_textStr">info</string>
+    <string name="btn_warn_textStr">Warn</string>
+    <string name="btn_error_textStr">Error</string>
+    <string name="btn_assert_textStr">Assert</string>
+    <string name="toast_btn_assertStr">btnAssert was clicked!</string>
+    <string name="btn_assert_clicked_textStr">Assert Clicked</string>
+    <string name="btn_error_clicked_textStr">Error Clicked</string>
+    <string name="btn_warn_clicked_textStr">Warn Clicked</string>
+    <string name="btn_info_clicked_textStr">InfoClicked</string>
+</resources>
