@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void infoClick(View view) {
-        Log.i("infoClick", "btnInfo was clicked!");
         if (!infoClicked) {
             btnInfo.setText(R.string.btn_info_clicked_textStr);
             btnInfo.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.btn_info_clickedCol));
@@ -103,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("infoClicked", false);
             editor.apply();
         }
+        Log.i("infoClick", "btnInfo was clicked!");
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("warnClicked", false);
             editor.apply();
         }
-        Log.w("warnClick", "btnWarn was clicked!");
+        Log.i("warnClick", "btnWarn was clicked!");
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("errorClicked", false);
             editor.apply();
         }
-        Log.e("errorClick", "btnError was clicked!");
+        Log.i("errorClick", "btnError was clicked!");
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -196,6 +196,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("assertClicked", false);
             editor.apply();
         }
+        Log.i("errorAssert", "btnAssert was clicked!");
     }
 }
 // Continuar este projeto, falta trabalhar com banco de dados e mudança de aspecto dos botões
