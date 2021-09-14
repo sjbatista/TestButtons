@@ -10,4 +10,10 @@
     <string name="btn_error_clicked_textStr">Error Clicked</string>
     <string name="btn_warn_clicked_textStr">Warn Clicked</string>
     <string name="btn_info_clicked_textStr">InfoClicked</string>
+    <string name="alertInfoClicked">Button \"Info\" was clicked !</string>
+    <string name="alertInfoClickedMessage">You clicked on \"Info\"</string>
+    <string name="alertWarnClicked">Button \"Warn\" was clicked !</string>
+    <string name="alertWarmClickedMessage">You clicked on \"Warn\"</string>
+    <string name="alertErrorClicked">Button \"Error\" was clicked !</string>
+    <string name="alertErrorClickedMessage">You clicked on \"Error\"</string>
 </resources>

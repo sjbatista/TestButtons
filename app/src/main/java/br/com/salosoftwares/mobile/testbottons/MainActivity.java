@@ -4,7 +4,9 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
@@ -80,10 +82,22 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("infoClicked", true);
             editor.putString("txtInitial", txtInitial.getText().toString());
             editor.apply();
+            AlertDialog alertInfoClick = new AlertDialog.Builder(MainActivity.this)
+                    .setTitle(R.string.alertInfoClicked)
+                    .setIcon(R.drawable.alert_popup_icon24dp)
+                    .setMessage(R.string.alertInfoClickedMessage)
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .create();
+                    alertInfoClick.show();
         } else {
             btnInfo.setText(R.string.btn_info_textStr);
             btnInfo.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.btn_infoCol));
-            txtInitial.setText(R.string.initial_textStr);
+            //txtInitial.setText(R.string.initial_textStr);
             infoClicked = false;
             SharedPreferences.Editor editor = dbTest.edit();
             editor.putBoolean("infoClicked", false);
@@ -102,10 +116,22 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("warnClicked", true);
             editor.putString("txtInitial", txtInitial.getText().toString());
             editor.apply();
+            AlertDialog alertWarnClick = new AlertDialog.Builder(MainActivity.this)
+                    .setTitle(R.string.alertWarnClicked)
+                    .setMessage(R.string.alertWarmClickedMessage)
+                    .setIcon(R.drawable.alert_popup_icon24dp)
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .create();
+            alertWarnClick.show();
         } else {
             btnWarn.setText(R.string.btn_warn_textStr);
             btnWarn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.btn_warnCol));
-            txtInitial.setText(R.string.initial_textStr);
+            //txtInitial.setText(R.string.initial_textStr);
             warnClicked = false;
             SharedPreferences.Editor editor = dbTest.edit();
             editor.putBoolean("warnClicked", false);
@@ -125,10 +151,22 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("errorClicked", true);
             editor.putString("txtInitial", txtInitial.getText().toString());
             editor.apply();
+            AlertDialog alertErrorClick = new AlertDialog.Builder(MainActivity.this)
+                    .setTitle(R.string.alertErrorClicked)
+                    .setMessage(R.string.alertErrorClickedMessage)
+                    .setIcon(R.drawable.alert_popup_icon24dp)
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .create();
+            alertErrorClick.show();
         } else {
             btnError.setText(R.string.btn_error_textStr);
             btnError.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.btn_errorCol));
-            txtInitial.setText(R.string.initial_textStr);
+            //txtInitial.setText(R.string.initial_textStr);
             errorClicked = false;
             SharedPreferences.Editor editor = dbTest.edit();
             editor.putBoolean("errorClicked", false);
@@ -150,9 +188,9 @@ public class MainActivity extends AppCompatActivity {
             editor.putString("txtInitial", txtInitial.getText().toString());
             editor.apply();
         } else {
-            btnAssert.setText(R.string.btn_assert_textStr);
+            //btnAssert.setText(R.string.btn_assert_textStr);
             btnAssert.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.btn_assertCol));
-            txtInitial.setText(R.string.initial_textStr);
+            //txtInitial.setText(R.string.initial_textStr);
             assertClicked = false;
             SharedPreferences.Editor editor = dbTest.edit();
             editor.putBoolean("assertClicked", false);
