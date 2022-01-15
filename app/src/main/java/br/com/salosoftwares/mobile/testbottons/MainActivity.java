@@ -199,4 +199,3 @@ public class MainActivity extends AppCompatActivity {
         Log.i("errorAssert", "btnAssert was clicked!");
     }
 }
-// Continuar este projeto, falta trabalhar com banco de dados e mudança de aspecto dos botões
